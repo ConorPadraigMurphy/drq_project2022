@@ -13,13 +13,13 @@ export class CurrentJobs extends React.Component {
                 console.log(error);
             })
     }
-    state = {
-        Jobs: []
-    };
+
+    state = { Jobs: [] };
+
     render() {
         return (
             <div>
-                <h3>Hello from my  component!</h3>
+                <h3></h3>
                 <Jobs Jobs={this.state.Jobs}></Jobs>
             </div>
         );
