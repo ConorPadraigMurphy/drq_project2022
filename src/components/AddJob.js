@@ -82,7 +82,7 @@ export class AddJob extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Add Car Model: </label>
+                        <label>Car Model: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.vechModel}
@@ -91,7 +91,7 @@ export class AddJob extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Add Problem: </label>
+                        <label>TO-DO: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.problem}
@@ -100,7 +100,7 @@ export class AddJob extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Add Owner: </label>
+                        <label>Owner: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.owner}
@@ -109,7 +109,7 @@ export class AddJob extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Add Phone Number: </label>
+                        <label>Contact Number: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.contactNum}
@@ -118,7 +118,7 @@ export class AddJob extends React.Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Add Registration Number: </label>
+                        <label>Registration Number: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.reg}
