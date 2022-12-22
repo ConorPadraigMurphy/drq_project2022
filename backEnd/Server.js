@@ -66,3 +66,25 @@ app.get('/api/Jobs', (req, res) => {
   })
 })
 
+app.get('/api/Jobs/:id', (req, res, next) => {
+  console.log(req.params.id);
+  MechJournal.findById(req.params.id,
+    function (err, data) {
+      res.json(data);
+    });
+})
+
+
+app.put('/api/Jobs/:id', function (req, res) {
+  console.log("Update Details " + req.params.id);
+  console.log(req.body);
+  console.log(req.body.vechModel);
+  console.log(req.body.problem);
+  console.log(req.body.owner);
+  console.log(req.body.contactNum);
+  console.log(req.body.reg);
+  MechJournal.findByIdAndUpdate(req.params.id, req.body, { new: true },
+    function (err, data) {
+      res.send(data);
+    })
+})

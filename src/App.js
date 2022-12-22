@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Content } from './components/Content';
 import { CurrentJobs } from './components/CurrentJobs';
 import { AddJob } from './components/AddJob';
-// import { UpdateJob } from './components/CurrentJobs';
+import { UpdateJob } from './components/UpdateJob';
 import { Footer } from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -28,7 +28,7 @@ class App extends React.Component {
                 {/* <Nav.Link href="/">Home</Nav.Link> */}
                 <Nav.Link href="/CurrentJobs">| Current Jobs |</Nav.Link>
                 <Nav.Link href="/AddJob">| Add Job |</Nav.Link>
-                <Nav.Link href="/UpdateJobs">| Update Job |</Nav.Link>
+                <Nav.Link href="/AddJob">| Buy Parts |</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
@@ -36,6 +36,7 @@ class App extends React.Component {
             <Route path='/' element={<Content></Content>}></Route>
             <Route path='/CurrentJobs' element={<CurrentJobs></CurrentJobs>}></Route>
             <Route path='/AddJob' element={<AddJob></AddJob>}></Route>
+            <Route path='/UpdateJob/:id' element={<UpdateJob></UpdateJob>}></Route>
           </Routes>
           {/* <Header></Header>
         <Content></Content>
