@@ -8,15 +8,14 @@ export class JobItemcomp extends React.Component {
         return (
             <div>
                 <Card>
-                    <CardHeader>{this.props.Jobs.owner}</CardHeader>
+                    <CardHeader>{this.props.Jobs.vechModel}</CardHeader>
                     <Card.Body>
+                        <p>{this.props.Jobs.problem}</p>
+                        <p>{this.props.Jobs.owner}</p>
                         <p>{this.props.Jobs.contactNum}</p>
                         <p>{this.props.Jobs.reg}</p>
-                        <p>{this.props.Jobs.vechModel}</p>
                     </Card.Body>
                 </Card>
-
-
             </div>
         );
     }

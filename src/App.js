@@ -3,7 +3,7 @@ import React from 'react';
 import { Header } from './components/Header';
 import { Content } from './components/Content';
 import { CurrentJobs } from './components/CurrentJobs';
-// import { AddJob } from './components/CurrentJobs';
+import { AddJob } from './components/AddJob';
 // import { UpdateJob } from './components/CurrentJobs';
 import { Footer } from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,6 +35,7 @@ class App extends React.Component {
           <Routes>
             <Route path='/' element={<Content></Content>}></Route>
             <Route path='/CurrentJobs' element={<CurrentJobs></CurrentJobs>}></Route>
+            <Route path='/AddJob' element={<AddJob></AddJob>}></Route>
           </Routes>
           {/* <Header></Header>
         <Content></Content>
