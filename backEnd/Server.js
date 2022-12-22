@@ -74,6 +74,12 @@ app.get('/api/Jobs/:id', (req, res, next) => {
     });
 })
 
+app.delete('/api/Jobs/:id', (req, res) => {
+  console.log('Deleting: ' + req.params.id);
+  MechJournal.findByIdAndDelete({ _id: req.params.id }, (error, data) => {
+    res.send(data);
+  })
+})
 
 app.put('/api/Jobs/:id', function (req, res) {
   console.log("Update Details " + req.params.id);
