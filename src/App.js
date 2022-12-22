@@ -1,12 +1,10 @@
 import './App.css';
 import React from 'react';
-import { Header } from './components/Header';
 import { Content } from './components/Content';
 import { CurrentJobs } from './components/CurrentJobs';
 import { AddJob } from './components/AddJob';
 import { UpdateJob } from './components/UpdateJob';
 import { BuyParts } from './components/BuyParts';
-import { Footer } from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -21,15 +19,15 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="App" >
           <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand href="/">Mechanics Journal</Navbar.Brand>
               <Nav className="me-auto">
-                {/* <Nav.Link href="/">Home</Nav.Link> */}
-                <Nav.Link href="/CurrentJobs">| Current Jobs |</Nav.Link>
-                <Nav.Link href="/AddJob">| Add Job |</Nav.Link>
-                <Nav.Link href="/BuyParts">| Buy Parts |</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/CurrentJobs">Current Jobs</Nav.Link>
+                <Nav.Link href="/AddJob">Add Job</Nav.Link>
+                <Nav.Link href="/BuyParts">Buy Parts</Nav.Link>
               </Nav>
             </Container>
           </Navbar>

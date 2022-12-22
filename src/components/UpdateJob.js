@@ -32,7 +32,7 @@ export function UpdateJob() {
             contactNum: contactNum,
             reg: reg
         }
-
+        //Gets the details corresponding to the id of the job
         axios.put('http://localhost:4000/api/Jobs/' + id, updateJob)
             .then((res) => {
                 console.log(res.data)
@@ -40,7 +40,7 @@ export function UpdateJob() {
             })
             .catch();
     }
-
+    //returns the items that have been updated by the  user
     return (
         <div>
             <h3>Update Job Client Details</h3>

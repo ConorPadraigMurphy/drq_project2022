@@ -77,6 +77,7 @@ export class AddJob extends React.Component {
         })
     }
 
+    //takes in the input for a new job
     render() {
         return (
             <div>

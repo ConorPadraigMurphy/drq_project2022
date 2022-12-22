@@ -25,9 +25,6 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 main().catch(err => console.log(err));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
 
 async function main() {
   await mongoose.connect('mongodb+srv://admin:admin@cluster0.h4quo3n.mongodb.net/?retryWrites=true&w=majority');
@@ -93,4 +90,12 @@ app.put('/api/Jobs/:id', function (req, res) {
     function (err, data) {
       res.send(data);
     })
+})
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname + '/../build/index.html'));
+// });
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
 })

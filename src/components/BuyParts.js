@@ -3,6 +3,7 @@ import '../App.css';
 import Card from 'react-bootstrap/Card';
 import CardHeader from 'react-bootstrap/esm/CardHeader';
 
+//Buy parts page links to two real car part websites
 export class BuyParts extends React.Component {
     render() {
         return (

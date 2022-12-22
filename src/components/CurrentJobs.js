@@ -4,6 +4,7 @@ import axios from "axios";
 
 export class CurrentJobs extends React.Component {
     componentDidMount() {
+        //Gets jobs from json on localhost:4000
         axios.get('http://localhost:4000/api/Jobs')
             .then(response => {
                 console.log(response.data)
@@ -19,7 +20,8 @@ export class CurrentJobs extends React.Component {
     render() {
         return (
             <div>
-                <h3></h3>
+                <h3>Current Jobs</h3>
+                {/* Lists the jobs */}
                 <Jobs Jobs={this.state.Jobs}></Jobs>
             </div>
         );
