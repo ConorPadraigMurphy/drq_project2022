@@ -7,19 +7,19 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //For use when built
-// const path = require('path');
-// app.use(express.static(path.join(__dirname, '../build')));
-// app.use('/static', express.static(path.join(__dirname, 'build//static')));
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../build')));
+app.use('/static', express.static(path.join(__dirname, 'build//static')));
 
-const cors = require('cors');
-app.use(cors());
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// const cors = require('cors');
+// app.use(cors());
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+//   res.header("Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
@@ -92,9 +92,9 @@ app.put('/api/Jobs/:id', function (req, res) {
     })
 })
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname + '/../build/index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../build/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
